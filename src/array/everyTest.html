@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试every函数</title>
+</head>
+<body>
+    <script src="./every.js"></script>
+    <script>
+        let arr = [1,2,3,4,5,6,-1]
+        let result = every(arr,(item,index) => {
+            return item > 0
+        })
+        console.log(result) 
+    </script>
+</body>
+</html>

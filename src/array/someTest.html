@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试some函数</title>
+</head>
+<body>
+    <script src="./some.js"></script>
+    <script>
+        let arr = [-1,-2,-3,-4,-5,-6]
+        let result = some(arr,(item,index) => {
+            return item > 0
+        })
+        console.log(result)  
+    </script>
+</body>
+</html>

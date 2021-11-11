@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义instanceof</title>
+</head>
+<body>
+    <script src="./myInstanceOf.js"></script>
+    <script>
+        //声明一个构造函数
+        function Person(){}
+
+        let p = new Person()
+
+        //检测
+        console.log(myInstanceOf(p,Person))
+    </script>
+</body>
+</html>

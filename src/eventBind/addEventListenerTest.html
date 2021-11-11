@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件委托</title>
+</head>
+<body>
+    <ul id="items">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <div>E</div>
+    </ul>
+
+    <script src="./addEventListener.js"></script>
+    <script>
+        //调用函数绑定事件
+        addEventListener('#items','click',function(e){
+            //输出标签文本
+            console.log(this.innerHTML)
+        },'li')
+    </script>
+</body>
+</html>

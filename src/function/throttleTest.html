@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试throttle函数</title>
+    <style>
+        body{
+            height: 2000px;
+            background: linear-gradient(#125,#eae);
+        }
+    </style>
+</head>
+<body>
+    <script src="./throttle.js"></script>
+    <script>
+        // //绑定滚动事件
+        // window.addEventListener('scroll',function(){
+        //     console.log(Date.now())    
+        // })
+
+        window.addEventListener('scroll',throttle(function(e){
+            console.log(Date.now())    
+        },500))
+    </script>
+</body>
+</html>

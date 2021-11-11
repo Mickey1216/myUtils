@@ -1,0 +1,37 @@
+//引入其他文件，然后再暴露
+// //1.目标文件中暴露数据  export 数据
+// import { chunk } from "./array/chunk"
+// //2.暴露数据
+// export { chunk }
+
+export {chunk} from './array/chunk'
+export {concat} from './array/concat'
+export {difference} from './array/difference'
+export {dropLeft,dropRight} from './array/drop'
+export {every} from './array/every'
+export {some} from './array/some'
+export {filter} from './array/filter'
+export {find} from './array/find'
+export {findIndex} from './array/findIndex'
+export {flatten1,flatten2} from './array/flatten'
+export {map} from './array/map'
+export {pull,pullAll} from './array/pull'
+export {reduce} from './array/reduce'
+export {slice} from './array/slice'
+export {unique} from './array/unique'
+export {axios} from './axios/axios'
+export {addEventListener} from './eventBind/addEventListener'
+export {eventBus} from './eventBus/eventBus'
+export {apply} from './function/apply'
+export {bind} from './function/bind'
+export {call} from './function/call'
+export {debounce} from './function/debounce'
+export {throttle} from './function/throttle'
+export {clone1,clone2,deepClone1,deepClone2,deepClone3,deepClone4} from './object/clone'
+export {mergeObject} from './object/mergeObject'
+export {myInstanceOf} from './object/myInstanceOf'
+export {newInstance} from './object/newInstance'
+export {PubSub} from './PubSub/PubSub'
+export {palindrome} from './string/palindrome'
+export {reverseString} from './string/reverseString'
+export {truncate} from './string/truncate'

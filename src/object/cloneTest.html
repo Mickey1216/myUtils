@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象/数组拷贝</title>
+</head>
+<body>
+    <script src="./clone.js"></script>
+    <script>
+        // //测试浅拷贝
+        // const obj = {x:'abc',y:{m:1}}
+        // const result = clone1(obj)
+        // //修改新数据中某个引用类型的值
+        // result.y.m = 2
+        // console.log(obj)
+        // console.log(result)
+
+        // //测试深拷贝1
+        // const obj = {
+        //     a:1,
+        //     b:['e','f','g'],
+        //     c:{h:20},
+        //     //JSON不能克隆方法
+        //     d:function(){}
+        // }
+
+        // //循环引用 报错：Uncaught TypeError: Converting circular structure to JSON
+        // obj.b.push(obj.c)
+        // obj.c.j = obj.b
+
+        // const result = deepClone1(obj)
+        // // //修改新数据的属性值
+        // // obj.c.h = 20000
+        // console.log(obj)
+        // console.log(result)
+
+        // //测试深拷贝2-递归
+        // const obj = {
+        //     a:1,
+        //     b:['e','f','g'],
+        //     c:{h:20},
+        //     d:function(){}
+        // }
+        // const result = deepClone2(obj)
+        // obj.c.h = 20000
+        // console.log(obj)
+        // console.log(result)
+
+        // //测试深拷贝3-解决循环引用问题
+        // const obj = {
+        //     a:1,
+        //     b:['e','f','g'],
+        //     c:{h:20},
+        //     d:function(){}
+        // }
+        // //循环引用
+        // obj.b.push(obj.c)
+        // obj.c.j = obj.b
+
+        // const result = deepClone3(obj)
+        // obj.c.h = 20000
+        // console.log(obj)
+        // console.log(result)
+
+        //测试深拷贝4-循环效率问题优化
+        const obj = {
+            a:1,
+            b:['e','f','g'],
+            c:{h:20},
+            d:function(){}
+        }
+        
+        //循环引用
+        obj.b.push(obj.c)
+        obj.c.j = obj.b
+
+        const result = deepClone3(obj)
+        obj.c.h = 20000
+        console.log(obj)
+        console.log(result)
+    </script>
+</body>
+</html>
